@@ -1,0 +1,180 @@
+/* Variáveis para padronização de cores e tamanhos */
+:root {
+    --primary-color: #22438C;    /* Azul Escuro (Header/Footer) */
+    --hover-color: #112C66;     /* Azul Mais Escuro (Hover) */
+    --text-color: white;
+    --mono-font: 'Consolas', 'Courier New', monospace; /* Fonte monoespaçada */
+    --border-radius: 6px; 
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f5; 
+}
+
+/* --- Estilização do Header e Footer --- */
+header, footer {
+    background-color: var(--primary-color); /* #22438C */
+    color: var(--text-color); /* Branco */
+    font-family: var(--mono-font); 
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* --- Menu de Navegação e Botões Aprimorados --- */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* Espaçamento entre os botões */
+}
+
+.navbar li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 18px; 
+    text-decoration: none;
+    /* Transições suaves para o efeito hover */
+    transition: background-color 0.3s, transform 0.1s; 
+    border-radius: var(--border-radius); /* Cantos arredondados */
+    font-weight: bold;
+    letter-spacing: 0.5px; 
+}
+
+/* Efeito de Destaque no Hover (Mais Bonito) */
+.navbar a:hover,
+.dropdown.active .dropbtn { 
+    background-color: var(--hover-color); /* #112C66 */
+    /* Efeito sutil de levantar/pressionar */
+    transform: translateY(-1px); 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Estilização do Dropdown (Com Animação) --- */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 180px;
+    z-index: 10;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius);
+    padding: 5px 0;
+    
+    /* Animação de entrada */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+/* Exibe o dropdown quando a classe 'active' é adicionada pelo JavaScript */
+.dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    padding: 10px 16px;
+    text-align: left;
+    border-radius: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--hover-color);
+}
+
+/* --- Estilização do Main (Conteúdo Principal com Sombra e Espaçamento) --- */
+main {
+    max-width: 900px; 
+    margin: 40px auto; /* Centraliza e cria o espaçamento lateral */
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    
+    /* Efeito de Sombra */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+main h1 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+main p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- Estilização do Footer --- */
+footer p {
+    margin: 0;
+    padding: 10px;
+    font-size: 0.9em;
+    /* --- Estilização do Main (Conteúdo Principal com Sombra e Espaçamento) --- */
+main {
+    max-width: 900px; /* Define a largura máxima do conteúdo */
+    margin: 40px auto; /* Centraliza o bloco e cria o espaçamento lateral */
+    padding: 30px; /* Espaçamento interno */
+    background-color: white;
+    border-radius: 8px;
+    
+    /* Efeito de Sombra */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Adiciona a sombra */
+}
+/* Variáveis para padronização de cores */
+:root {
+    --primary-color: #22438C;    /* Cor de Fundo do Header/Footer */
+    --hover-color: #112C66;     /* Cor para o Hover dos Botões */
+    --text-color: white;
+    --mono-font: 'Consolas', 'Courier New', monospace; 
+    /* ... outras variáveis ... */
+}
+
+/* Aplicação de Cores e Fonte no Header e Footer */
+header, footer {
+    background-color: var(--primary-color); /* Aplica #22438C */
+    color: var(--text-color); /* Aplica Texto Branco */
+    font-family: var(--mono-font); /* Aplica Fonte Monoespaçada */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* Estilização do texto dentro do footer */
+footer p {
+    margin: 0;
+    padding: 10px;
+    font-size: 0.9em;
+}
+/* Estilo base dos links (para garantir a cor do texto) */
+.navbar a {
+    color: var(--text-color); /* Texto Branco */
+    /* ... outros estilos de botão ... */
+}
+
+/* Efeito de Destaque no Hover */
+.navbar a:hover,
+.dropdown.active .dropbtn { 
+    background-color: var(--hover-color); /* Aplica #112C66 no hover */
+    /* Efeitos visuais adicionais (opcional, mas deixa mais bonito) */
+    transform: translateY(-1px); 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+}
